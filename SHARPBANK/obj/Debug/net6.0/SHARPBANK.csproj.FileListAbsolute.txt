@@ -1,0 +1,15 @@
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\bin\Debug\net6.0\SHARPBANK.exe
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\bin\Debug\net6.0\SHARPBANK.deps.json
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\bin\Debug\net6.0\SHARPBANK.runtimeconfig.json
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\bin\Debug\net6.0\SHARPBANK.dll
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\bin\Debug\net6.0\SHARPBANK.pdb
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.csproj.AssemblyReference.cache
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.AssemblyInfoInputs.cache
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.AssemblyInfo.cs
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.csproj.CoreCompileInputs.cache
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.dll
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\refint\SHARPBANK.dll
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.pdb
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\SHARPBANK.genruntimeconfig.cache
+C:\Users\Natanael\Desktop\SHARPBANK_V1\SHARPBANK\obj\Debug\net6.0\ref\SHARPBANK.dll
