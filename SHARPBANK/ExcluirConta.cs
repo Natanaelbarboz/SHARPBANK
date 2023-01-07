@@ -8,7 +8,7 @@ namespace SHARPBANK
 {
     internal class ExcluirConta
     {
-        public static void DeletarConta(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo)
+        public static void DeletarConta(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo, List<int> Conta, List<int> CV)
         {
             Console.WriteLine();
             Console.Write("                     INFORME SEU CPF: ");
@@ -17,7 +17,7 @@ namespace SHARPBANK
             while (entradaCPF == "")
             {
                 Console.Clear();
-                Front.SegundaTelaDeInicio();
+                Telas.SegundaTelaDeInicio();
                 Console.Write("                     INFORME SEU CPF: ");
                 entradaCPF = Console.ReadLine();
             }
@@ -39,32 +39,26 @@ namespace SHARPBANK
                     Console.WriteLine($"\n                     {Nome[i]}, DESEJA REALMENTE ENCERRAR SUA CONTA?");
                     Console.WriteLine("\n                     1 - SIM || 0 - NÃO");
                     Console.Write("\n                     INFORME UMA DAS OPÇÕES: ");
+                   
+                    string desicao = Console.ReadLine();
 
-                    string entradaDesicao = Console.ReadLine();
-
-                    while (entradaDesicao == "")
-                    {
-                        Console.Write("\n                    INFORME UMA DAS OPÇÕES: ");
-                        entradaDesicao = Console.ReadLine();
-                    }
-
-                    int desicao = int.Parse(entradaDesicao);
-
-                    while (desicao != 1 && desicao != 0)
+                    while (desicao != "1" && desicao != "0")
                     {
                         Console.WriteLine("\n                     1 - SIM || 0 - NÃO");
-                        Console.Write($"\n                     {Nome[i]}, OPÇÃO DIGITADA NÃO EXISTE, DIGITE UMA DAS OPÇÕES ACIMA");
-                        desicao = int.Parse(Console.ReadLine());
+                        Console.Write($"\n                     {Nome[i].ToUpper()}, OPÇÃO DIGITADA NÃO EXISTE, DIGITE UMA DAS OPÇÕES ACIMA");
+                        desicao = Console.ReadLine();
 
                     }
 
                     switch (desicao)
                     {
-                        case 1:
+                        case "1":
                             CPF.Remove(CPF[i]);
                             Nome.Remove(Nome[i]);
                             Senha.Remove(Senha[i]);
                             Saldo.Remove(Saldo[i]);
+                            Conta.Remove(Conta[i]);
+                            CV.Remove(CV[i]);
                             Console.Clear();
                             Console.WriteLine("                      _  __ ___ _  _  __ /\\/  _   ||||\r\n                     / \\_ _| __| \\| |/ _|/ \\ / \\  L|L|\r\n                    | o | || _|| \\\\ ( (_| o ( o )     \r\n                    |_n_|_||___|_|\\_|\\__|_n_|\\_/  ()()\r\n                                                _)              \r\n");
                             Console.WriteLine();
@@ -78,13 +72,13 @@ namespace SHARPBANK
                             Console.ReadKey();
                             Console.Clear();
                             break;
-                        case 0:
+                        case "0":
                             Console.Clear();
-                            Front.SegundaTelaDeInicio();
+                            Telas.SegundaTelaDeInicio();
                             Console.WriteLine();
                             Console.Write("                     APERTE QUALQUER TECLA PARA CONTINUAR");
                             Console.ReadKey();
-                            Front.SubMenuCliente(CPF, Nome, Senha, Saldo);
+                            Telas.SubMenuCliente(CPF, Nome, Senha, Saldo, Conta, CV);
                             break;
                     }
 

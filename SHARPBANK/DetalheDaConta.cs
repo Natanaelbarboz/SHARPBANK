@@ -10,7 +10,7 @@ namespace SHARPBANK
 
     internal class DetalheDaConta
     {
-        public static void DetalhedaContaCliente(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo)
+        public static void DetalhedaContaCliente(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo, List<int> Conta, List<int> CV)
         {
             Console.WriteLine();
             Console.Write("                     INFORME O SEU CPF: ");
@@ -19,7 +19,7 @@ namespace SHARPBANK
             while (entradaCPF == "")
             {
                 Console.Clear();
-                Front.SegundaTelaDeInicio();
+                Telas.SegundaTelaDeInicio();
                 Console.WriteLine();
                 Console.Write("                     INFORME O SEU CPF: ");
                 entradaCPF = Console.ReadLine();
@@ -35,17 +35,17 @@ namespace SHARPBANK
                 {
                     j++;
                     Console.Clear();
-                    Front.SegundaTelaDeInicio();
+                    Telas.SegundaTelaDeInicio();
+                    Console.WriteLine($"                     AGÊNCIA: 777  CONTA: {Conta[i]} CV: {CV[i]} \n");
                     Console.WriteLine($"                     CPF: {CPF[i]}  \n");
                     Console.WriteLine($"                     NOME: {Nome[i]}  \n");
-                    Console.WriteLine($"                     SALDO: R$ {Saldo[i]:f2}  \n");
-
+                    Console.WriteLine($"                     SALDO: R$ {Saldo[i]:f2}  \n");                                      
                     Console.Write("                     APERTE QUALQUER TECLA PARA CONTINUAR");
                     Console.ReadKey();
                     Console.Clear();
-                    Front.SegundaTelaDeInicio();
+                    Telas.SegundaTelaDeInicio();
                     Console.WriteLine();
-                    Front.SubMenuCliente(CPF, Nome, Senha, Saldo);
+                    Telas.SubMenuCliente(CPF, Nome, Senha, Saldo, Conta, CV);
 
                 }
 

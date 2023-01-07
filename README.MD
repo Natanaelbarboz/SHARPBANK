@@ -6,7 +6,7 @@
 
 <p2>Trata-se de um sistema backend de um pequeno banco.<br></p2>
 <p2>O sistema se dividi em duas partes principais.<br><br>
-A primeira parte é destinada para o cliente que no momento conta com as opções básicas de Cadastrar-se, Sacar, Depositar, Editar conta e Deletar conta.<br><br>
+A primeira parte é destinada para o cliente que no momento conta com as opções básicas de Cadastrar-se, Sacar, Depositar, Transferir, Editar conta e Deletar conta.<br><br>
 A segunda parte é destinada aos colaboradores do banco onde eles irão conseguir ver todas as contas cadastradas (CPF, Nome e Saldo), o valor total no caixa e ver detalhes de um usuário específico.
 
 <h3>Telas de Menu.🖥️</h3>
@@ -32,7 +32,7 @@ Para acessar a conta é necessário usuário(CPF) e senha.</p5>
 <h4>Menu Colaborador.👩‍💻</h4>
 <p5>Menu em que divide as opções de consultas que o colaborador pode fazer.<br><br></p5>
 
-![Menu Cliente](Imagens/SHARPBANK%20-%20PRIMEIRA%20TELA%20COLABORADOR.PNG)
+![Menu Colaborador](Imagens/SHARPBANK%20-%20PRIMEIRA%20TELA%20COLABORADOR.PNG)
 
 <br><br>
 

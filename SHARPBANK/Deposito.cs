@@ -9,7 +9,7 @@ namespace SHARPBANK
 {
     internal class Depositar
     {
-        public static void Deposito(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo)
+        public static void Deposito(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo, List<int> Conta, List<int> CV)
         {
             Console.WriteLine();
             Console.Write("                     INFORME SEU CPF: ");
@@ -17,7 +17,7 @@ namespace SHARPBANK
             while (entradaCPF == "")
             {
                 Console.Clear();
-                Front.SegundaTelaDeInicio();
+                Telas.SegundaTelaDeInicio();
                 Console.Write("                     INFORME SEU CPF: ");
                 entradaCPF = Console.ReadLine();
             }
@@ -37,10 +37,26 @@ namespace SHARPBANK
                     while (entradaDepositoString == "")
                     {
                         Console.Clear();
-                        Front.SegundaTelaDeInicio();
+                        Telas.SegundaTelaDeInicio();
                         Console.WriteLine();
                         Console.Write($"                     {Nome[i]} INFORME O VALOR QUE DESEJA DEPOSITAR: R$ ");
                         entradaDepositoString = Console.ReadLine();
+                    }
+                    
+                    for (int j = 0; j < entradaDepositoString.Length; j++)
+                    {
+
+                        while (!char.IsDigit(entradaDepositoString[j]))
+                        {
+                            j = 0;
+                            Console.Clear();
+                            Telas.SegundaTelaDeInicio();
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("                 INFORME O VALOR DO DEPÓSITO SEM PONTO OU VÍRGULA");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.Write($"                 {Nome[i]} INFORME O VALOR QUE DESEJA DEPOSITAR: R$ ");
+                            entradaDepositoString = Console.ReadLine();
+                        }
                     }
 
                     double entrdaDeposito = double.Parse(entradaDepositoString);
@@ -53,9 +69,9 @@ namespace SHARPBANK
                     Console.ReadKey();
                     Console.WriteLine("                     APERTE QUALQUER TECLA PARA CONTINUAR");
                     Console.Clear();
-                    Front.SegundaTelaDeInicio();
+                    Telas.SegundaTelaDeInicio();
                     Console.WriteLine();
-                    Front.SubMenuCliente(CPF, Nome, Senha, Saldo);
+                    Telas.SubMenuCliente(CPF, Nome, Senha, Saldo, Conta, CV);
 
                 }
 
