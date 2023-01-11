@@ -60,6 +60,10 @@ namespace SHARPBANK
                 entradaNome = Console.ReadLine();
             }
             Console.Write("\n                 DIGITE A SENHA QUE DESEJA CADASTRAR: ");
+
+
+
+
             string entradaSenha = Console.ReadLine();
             while (entradaSenha.Length < 6 || entradaSenha == "")
             {
@@ -97,21 +101,19 @@ namespace SHARPBANK
                 int numeroConta = conta.Next(0,99999);
                 Random CodV = new Random();
                 int codigoDeVerificação = CodV.Next(0,9);
-
                 Conta.Add(numeroConta);
                 CV.Add(codigoDeVerificação);
-
                 Console.WriteLine();
                 Console.Clear();
                 Telas.SegundaTelaDeInicio();
                 Console.WriteLine("                     __  _ _   _     __  _   _  _  ___  _    ___  _   _ \r\n                    / _|| | | / \\   / _|/ \\ | \\| ||_ _|/ \\  | __|/ \\ | |\r\n                    \\_ \\| U || o | ( (_( o )| \\\\ | | || o | | _|( o )| |\r\n                    |__/|___||_n_|  \\__|\\_/ |_|\\_| |_||_n_| |_|  \\_/ |_|");
                 Console.WriteLine("                      _   ___  ___  ___  ___  _     __  _   _   _   __  _ _   __  ___  __  __   _   || ||\r\n                     / \\ | o )| __|| o \\|_ _|/ \\   / _|/ \\ | \\_/ | / _|| | | / _|| __|/ _|/ _| / \\  L| L|\r\n                    | o || o \\| _| |   / | || o | ( (_( o )| \\_/ | \\_ \\| U |( (_ | _| \\_ \\\\_ \\( o )      \r\n                    |_n_||___/|___||_|\\\\ |_||_n_|  \\__|\\_/ |_| |_| |__/|___| \\__||___||__/|__/ \\_/  () ()\r\n");
-                Console.WriteLine("                     VOCÊ JÁ PODE COMEÇAR A UTILIZAR NOSSO SERVIÇOS!!\n\n\n");
+                Console.WriteLine("                     ACESSE SUA CONTA PARA COMEÇAR A UTILIZAR NOSSOS SERVIÇOS!!\n\n\n");
                 Console.Write("                 PRECIONE UMA TECLA PARA CONTINUAR");
                 Console.ReadKey();
-                Console.Clear();
+                Console.Clear();                
                 Telas.SegundaTelaDeInicio();
-                Telas.SubMenuCliente(CPF, Nome, Senha, Saldo, Conta, CV);
+                Telas.MenuCliente();
                 Console.WriteLine();
 
             }

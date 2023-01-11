@@ -44,6 +44,8 @@ namespace SHARPBANK
 
         public static void MenuBack(List<string> CPF, List<string> Nome, List<string> Senha, List<double> Saldo, List<int> Conta, List<int> CV)
         {
+          
+            TesteSenha entradaSenha = new TesteSenha();
             Console.WriteLine("                 ___ ___ _   _   _ _ _ _  _ __   _     __ _  _    _  ___  _  ___  _  __   _  ___  ||||||\r\n                | o ) __| \\_/ | | | | | \\| |  \\ / \\   / _/ \\| |  / \\| o )/ \\| o \\/ \\|  \\ / \\| o \\ L|L|L|\r\n                | o \\ _|| \\_/ | | V | | \\\\ | o | o ) ( (( o ) |_| o | o ( o )   / o | o | o )   /       \r\n                |___/___|_| |_|  \\_/|_|_|\\_|__/ \\_/   \\__\\_/|___|_n_|___/\\_/|_|\\\\_n_|__/ \\_/|_|\\\\ ()()()                                                                                                                                                                                                \r\n                    ___ ___ _  _ _ _  _    _ _ _   _   // ___ _ _   _  _    __  _  _   ||||||\r\n                   |_ _| __| \\| | U |/ \\  | | | \\_/ |  / \\_ _| | \\_/ |/ \\  |  \\| |/ \\  L|L|L|\r\n                    | || _|| \\\\ |   | o | | U | \\_/ | ( o ) || | \\_/ ( o ) | o ) | o |       \r\n                    |_||___|_|\\_|_n_|_n_| |___|_| |_|  \\_/|_||_|_| |_|\\_/  |__/|_|_n_| ()()()\r\n                                                                          \r\n \r\n     _ _  _   __ /^\\   //_   __   _    ___ _  _   _  _  _  _ _ _  _    __   _    __ ___ _ _   __  _  _  _ _ _  _  \r\n    | | |/ \\ / _| __| | __| |  \\ / \\  |_ _/ \\| \\_/ |/ \\| \\| | U |/ \\  |  \\ / \\  / _| __| | | / _|/ \\| \\| | U |/ \\ \r\n    | V ( o | (_| _|  | _|  | o | o )  | | o | \\_/ | o | \\\\ |   ( o ) | o | o ) \\_ \\ _|| U | \\_ ( o ) \\\\ |   ( o )\r\n     \\_/ \\_/ \\__|___| |___| |__/ \\_/   |_|_n_|_| |_|_n_|_|\\_|_n_|\\_/  |__/ \\_/  |__/___|___| |__/\\_/|_|\\_|_n_|\\_/ \r\n                                                                                                              \r\n                      _   __ ___ ___ __  _ ___ ___   ___ _   _   __ _   _   _ ___ __ _   _  _   ||||||\r\n                     / \\ / _| o \\ __|  \\| |_ _| __| | __| \\_/ | / _| | | \\_/ | __/ _| \\_/ |/ \\  L|L|L|\r\n                    | o ( (_|   / _|| o ) || || _|  | _|| \\_/ | \\_ \\ | | \\_/ | _|\\_ \\ \\_/ ( o )       \r\n                    |_n_|\\__|_|\\\\___|__/|_||_||___| |___|_| |_| |__/_| |_| |_|___|__/_| |_|\\_/  ()()()\r\n");
             string usuario = "NatanaelBarboza"; // USUÁRIO PADRÃO, POR ENQUANTO
             string senha = "SHARPBANK"; // SENHA PADRÃO, POR ENQUANTO
@@ -52,12 +54,10 @@ namespace SHARPBANK
             string entradaLogin = Console.ReadLine();
             Console.WriteLine();
             Console.Write("                                     DIGITE SUA SENHA: ");
-            string entradaSenha = Console.ReadLine();
-            Console.WriteLine();
 
             for (int i = 0; i <= 3; i++)
             {
-                if (entradaLogin == usuario && entradaSenha == senha)
+                if (entradaLogin == usuario && entradaSenha.TesteOcultarSenha() == senha)
                 {
                     
                     Console.Clear();
@@ -91,7 +91,7 @@ namespace SHARPBANK
                     entradaLogin = Console.ReadLine();
                     Console.WriteLine();
                     Console.Write("                                     DIGITE SUA SENHA: ");
-                    entradaSenha = Console.ReadLine();
+                    
                 }
             }
 
@@ -175,7 +175,6 @@ namespace SHARPBANK
 
                 }
 
-
             }
             if (j == 0)
             {
@@ -237,7 +236,6 @@ namespace SHARPBANK
                 }
 
             } while (entradaEditar != "0");
-
 
         }
     }

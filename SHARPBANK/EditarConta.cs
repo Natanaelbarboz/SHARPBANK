@@ -22,10 +22,10 @@ namespace SHARPBANK
                 entradaCPF = Console.ReadLine();
             }
 
-
+            int k = 0;
             for (int i = 0; i < CPF.Count; i++)
             {
-                int k = 0;
+                
                 if (CPF[i] == entradaCPF)
                 {
                     k++;
@@ -47,6 +47,7 @@ namespace SHARPBANK
 
                     while (entradaEditar != "0" && entradaEditar != "1" && entradaEditar != "2")
                     {
+                        Console.Clear();
                         Console.WriteLine();
                         Console.WriteLine("                     1 - EDITAR NOME");
                         Console.WriteLine("                     2 - EDITAR SENHA");
@@ -92,16 +93,16 @@ namespace SHARPBANK
                     }
 
                 }
-                if(k == 0)
-                {
-                    Console.WriteLine("                     CPF NÃO LOCALIZADO\n");
-                    Console.WriteLine("                     PARA SUA SEGURANÇA A SESSÃO ESTÁ SENDO ENCERRADA\n");
-                    Console.WriteLine("                     AGRADECEMOS A SUA COMPREENÇÃO\n");
-                    Console.Write("                     APERTE QUALQUER TECLA PARA CONTINUAR");
-                    Console.ReadKey();
-                }
+                
             }
-
+            if (k == 0)
+            {
+                Console.WriteLine("                     CPF NÃO LOCALIZADO\n");
+                Console.WriteLine("                     PARA SUA SEGURANÇA A SESSÃO ESTÁ SENDO ENCERRADA\n");
+                Console.WriteLine("                     AGRADECEMOS A SUA COMPREENÇÃO\n");
+                Console.Write("                     APERTE QUALQUER TECLA PARA CONTINUAR");
+                Console.ReadKey();
+            }
         }
     }
 }

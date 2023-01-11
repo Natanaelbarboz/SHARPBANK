@@ -20,6 +20,7 @@ namespace SHARPBANK
             List<double> Saldo = new List<double>();
             List<int> Conta = new List<int>();
             List<int> CV = new List<int>();
+            string testeEntradaCPFDoCliente = string.Empty;
 
 
             string entradaMenuInicia;
@@ -93,6 +94,7 @@ namespace SHARPBANK
             } while (entradaMenuInicia != "0");
 
         }
+        
 
     }
 

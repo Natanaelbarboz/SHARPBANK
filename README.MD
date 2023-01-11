@@ -45,4 +45,5 @@ Futuramente será implementado uma conexão ao banco de dados e ao front.</p5>
 
 <p5>Nome: Natanael barboza<br>
 Contato: natanaelblima4@gmail.com<br>
-Linkedin: https://www.linkedin.com/in/natanael-barboza/</p5>
+Linkedin: https://www.linkedin.com/in/natanael-barboza/
+Youtube: https://youtu.be/Zqdl_d26K0c</p5>

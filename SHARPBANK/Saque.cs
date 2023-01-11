@@ -32,7 +32,7 @@ namespace SHARPBANK
                     j++;
                     Console.Write($"\n                     {Nome[i]} INFORME O VALOR QUE DESEJA SACAR: R$ ");
                     string entradaSaqueString = Console.ReadLine();
-                    while (entradaSaqueString =="" || entradaSaqueString.Length < 11 || entradaSaqueString.Length > 11)
+                    while (entradaSaqueString =="" )
                     {
                         Console.Clear();
                         Telas.SegundaTelaDeInicio();
